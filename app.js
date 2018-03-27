@@ -1,8 +1,7 @@
 const express = require('express');
 const app = express();
+const routes = require('./src/airports');
 
-app.get('/', function(req, res) {
-    res.send('hello');
-})
+app.use('/', routes)
 
 app.listen(8080);
