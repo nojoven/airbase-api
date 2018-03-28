@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const routes = require('./src/airports');
+const routes = require('./app/routes');
 
 app.use('/', routes)
 
