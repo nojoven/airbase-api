@@ -7,11 +7,11 @@ function getAirportsRadar(req, res) {
     let lonRange = [parseFloat(coords[1]) - 0.1, parseFloat(coords[1]) + 0.1];
 
 
-    mongoclient.connect('process.env.MONGODB_URI || "mongodb://localhost:27017/airbase', function (err, client) {
+    mongoclient.connect(process.env.MONGODB_URI, function (err, client) {
         if (err) {
             throw err;
         }
-        client.db('airbase').collection('airports').find({
+        client.db('heroku_8618v047').collection('airports').find({
             $and: [{
                 lat: {
                     $gt: latRange[0],

@@ -6,7 +6,7 @@ function getCountry(req, res) {
         if (err) {
             throw err;
         }
-        client.db('airbase').collection('airports').find({country:countryName.charAt(0).toUpperCase() + countryName.slice(1)}).toArray(function (err, result) {
+        client.db('heroku_8618v047').collection('airports').find({country:countryName.charAt(0).toUpperCase() + countryName.slice(1)}).toArray(function (err, result) {
             if (err) {
                 throw err;
             }
