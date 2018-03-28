@@ -7,7 +7,7 @@ function getAirportsRadar(req, res) {
     let lonRange = [parseFloat(coords[1]) - 0.1, parseFloat(coords[1]) + 0.1];
 
 
-    mongoclient.connect('mongodb://localhost:27017/airbase', function (err, client) {
+    mongoclient.connect('process.env.MONGODB_URI || "mongodb://localhost:27017/airbase', function (err, client) {
         if (err) {
             throw err;
         }

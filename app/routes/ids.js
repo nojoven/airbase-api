@@ -3,7 +3,7 @@ const {ObjectId} = require('mongodb');
 
 function getId(req, res) {
     let idVal = req.query.name;
-    mongoclient.connect('mongodb://localhost:27017/airbase', function (err, client) {
+    mongoclient.connect('process.env.MONGODB_URI || "mongodb://localhost:27017/airbase', function (err, client) {
         if (err) {
             throw err;
         }
