@@ -3,5 +3,6 @@ const airportController = require('../controllers/airports');
 
 routes.get('/airports', airportController.getAirports);
 routes.get('/airports/:airportId', airportController.getAirportId);
+routes.get('/search', airportController.searchAirports);
 
 module.exports = routes;

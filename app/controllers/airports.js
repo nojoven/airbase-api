@@ -74,5 +74,12 @@ module.exports = airports = {
             if (err) throw err;
             res.json(result)
         })
+    },
+
+    searchAirports(req, res) {
+        req.app.locals.db.db('heroku_8618v047').collection("airports").find({$text: {$search: req.query.query}}).toArray(function (err, result) {
+            if (err) throw err;
+            res.json(result)
+        })
     }
 }
