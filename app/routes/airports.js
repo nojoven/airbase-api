@@ -1,7 +1,7 @@
 const mongoclient = require('mongodb').MongoClient;
 
 function getAllAirports(req, res) {
-  mongoclient.connect('process.env.MONGODB_URI || "mongodb://localhost:27017/airbase', function (err, client) {
+  mongoclient.connect(process.env.MONGODB_URI, function (err, client) {
     if (err) {
       throw err;
     }
