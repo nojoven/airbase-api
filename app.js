@@ -12,5 +12,5 @@ MongoClient.connect("mongodb://heroku_8618v047:s1s95q848cfnk2gi07ksuri2ov@ds1190
     if (err) throw err;
 
     app.locals.db = db;
-    app.listen(3000);
+    app.listen(process.env.PORT || 3000);
 });
