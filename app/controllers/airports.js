@@ -22,8 +22,8 @@ function buildMongoQuery(queryList) {
 function parseRange(coords) {
     if (coords) {
         let latlon = coords.split(",");
-        let latRange = [parseFloat(latlon[0]) - 0.1, parseFloat(latlon[0]) + 0.1];
-        let lonRange = [parseFloat(latlon[1]) - 0.1, parseFloat(latlon[1]) + 0.1];
+        let latRange = [parseFloat(latlon[0]) - 0.5, parseFloat(latlon[0]) + 0.5];
+        let lonRange = [parseFloat(latlon[1]) - 0.5, parseFloat(latlon[1]) + 0.5];
 
         return {
             lat: {
